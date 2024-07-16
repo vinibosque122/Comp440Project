@@ -27,6 +27,7 @@ const SignupForm = () => {
     } catch (error) {
       console.error('Error registering user:', error);
       // Handle error: show error message to user
+      alert('Failed to register user');
     }
   };
 
@@ -51,8 +52,8 @@ const SignupForm = () => {
         />
         <br />
         <input
-          type="password_confirm"
-          placeholder="password_confrim"
+          type="password"
+          placeholder="password_confirm"
           value={password_confirm}
           onChange={(e) => setpassword_confirm(e.target.value)}
           required

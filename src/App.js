@@ -1,20 +1,23 @@
-import logo from './Argen.jpeg';
+// App.js
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import SignupForm from './SignupForm.js';
+import SigninForm from './SigninForm.js';
+import Dashboard from './Dashboard.js';
+import MainPage from './MainPage.js';
+
 function App() {
   return (
-    <div className="mainPage">
-      <header className="App-header">
-''        <img src={logo} className="App-logo" alt="logo" />
-        <div className='mainText'>
-        <p>
-          Fede and Vini's 440 Project
-          <SignupForm />
-        </p>  
-        </div>      
-      </header>
-          
-    </div>
+    <Router>
+      
+      <Routes>
+        <Route path="/" element={<MainPage />}>
+          <Route path='signup' element={<SignupForm />} />
+          <Route path="signin" element={<SigninForm />} />
+        </Route>
+        <Route path="dashboard" element={<Dashboard />} />
+      </Routes>
+    </Router>
   );
 }
 
