@@ -45,6 +45,28 @@ app.post('/signup',(req,res) => {
             return res.status(400).json({ error: 'Failed to register user.' });
           }
           res.status(200).json({ message: 'User registered successfully.' });
+          
+        });
+      });
+      app.post('/signin', (req, res) => {
+        const { username, password } = req.body;
+      
+        if (!username || !password) {
+          return res.status(400).json({ error: 'Username and password are required.' });
+        }
+      
+        const sql = 'SELECT * FROM user WHERE username = ? AND password = ?';
+        db.query(sql, [username, password], (err, results) => {
+          if (err) {
+            console.error('Error during sign-in:', err);
+            return res.status(500).json({ error: 'Server error.' });
+          }
+      
+          if (results.length > 0) {
+            res.status(200).json({ message: 'User signed in successfully.' });
+          } else {
+            res.status(401).json({ error: 'Invalid username or password.' });
+          }
         });
       });
 
