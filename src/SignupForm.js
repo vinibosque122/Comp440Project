@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './App.css';
 
-const SignupForm = () => {
+const SignupForm = ({onClose}) => {
   const [username, setusername] = useState('');
   const [password, setpassword] = useState('');
   const [password_confirm, setpassword_confirm] = useState('');
@@ -29,10 +30,13 @@ const SignupForm = () => {
       // Handle error: show error message to user
       alert('Failed to register user');
     }
+    onClose();
   };
 
   return (
-    <div>
+    <div className="modal">
+      <div className="modal-content">
+        <span className="close" onClick={onClose}>&times;</span>
       <h2>Signup</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -42,7 +46,6 @@ const SignupForm = () => {
           onChange={(e) => setusername(e.target.value)}
           required
         />
-        <br />
         <input
           type="password"
           placeholder="password"
@@ -50,7 +53,6 @@ const SignupForm = () => {
           onChange={(e) => setpassword(e.target.value)}
           required
         />
-        <br />
         <input
           type="password"
           placeholder="password_confirm"
@@ -58,7 +60,6 @@ const SignupForm = () => {
           onChange={(e) => setpassword_confirm(e.target.value)}
           required
         />
-        <br />
         <input
           type="firstName"
           placeholder="firstName"
@@ -66,7 +67,6 @@ const SignupForm = () => {
           onChange={(e) => setfirstName(e.target.value)}
           required
         />
-        <br />
         <input
           type="lastName"
           placeholder="lastName"
@@ -74,7 +74,6 @@ const SignupForm = () => {
           onChange={(e) => setlastName(e.target.value)}
           required
         />
-        <br />
         <input
           type="email"
           placeholder="Email"
@@ -82,9 +81,9 @@ const SignupForm = () => {
           onChange={(e) => setemail(e.target.value)}
           required
         />
-        <br />
         <button type="submit">Sign Up</button>
       </form>
+    </div>
     </div>
   );
 };
