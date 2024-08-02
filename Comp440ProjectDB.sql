@@ -37,6 +37,19 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+
+DROP TABLE IF EXISTS `items`;
+CREATE TABLE `items` (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    category VARCHAR(255) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    postDate DATE NOT NULL,
+    FOREIGN KEY (username) REFERENCES user(username)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 --
 -- Dumping data for table `user`
 --
