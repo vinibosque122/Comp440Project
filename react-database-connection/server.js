@@ -18,19 +18,23 @@ app.use(cors({
   
 
 
-const db = mysql.createConnection({
+const db = mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME
+  database: process.env.DB_NAME,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
 });
 
-db.connect(err => {
+db.getConnection((err, connection) => {
   if (err) {
    console.error('Error connecting to MySQL:', err);
     throw err;
   }
-  console.log('MySQL connected...');
+  console.log('MySQL connected....');
+  connection.release();
 });
 
 app.post('/signup',(req,res) => {
