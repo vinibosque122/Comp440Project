@@ -10,7 +10,7 @@ import MainPage from './MainPage.js';
 function App() {
   return (
     <Router>
-      
+
       <Routes>
         <Route path="/" element={<MainPage />}>
           <Route path='signup' element={<SignupForm />} />
@@ -23,3 +23,4 @@ function App() {
 }
 
 export default App;
+
