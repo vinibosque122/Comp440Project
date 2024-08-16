@@ -7,34 +7,26 @@ const cors = require('cors');
 const app = express();
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'http://localhost:3000', // Allow requests from localhost:3000
-    methods: ['GET', 'POST'], // Allow only GET and POST requests
-    allowedHeaders: ['Content-Type'], // Allow only Content-Type header
-    credentials: true // Enable credentials (cookies, authorization headers)
-  }));
-  // CORS preflight handling middleware
+    origin: 'http://localhost:3000',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type'],
+    credentials: true
+}));
 
-
-  
-
-
+// Create a MySQL connection pool
 const db = mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0
+  database: process.env.DB_NAME
 });
 
-db.getConnection((err, connection) => {
+db.connect(err => {
   if (err) {
    console.error('Error connecting to MySQL:', err);
     throw err;
   }
-  console.log('MySQL connected....');
-  connection.release();
+  console.log('MySQL connected...');
 });
 
 app.post('/signup',(req,res) => {
@@ -174,5 +166,5 @@ app.post('/signup',(req,res) => {
     
       
 app.listen(5001, () => {
-  console.log('Server started on port 5000');
+  console.log('Server started on port 5001');
 });

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4830c6a5-cb95-4977-b66a-ca09966970f9" name="Changes" comment="I added 6 more files which represent what we need to do for Phase 3. I just added them but we still need to update several files to include the new routes and components" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;FedeBailaque&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/vinibosque122/Comp440Project&quot;,
+    &quot;accountId&quot;: &quot;b12a3db1-9d59-4dc4-9602-0c59b49bf966&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/SignupForm.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2jl0gx0itapgKxgIDOzEAALe29P" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/fede/Desktop/CSUN/Database Design - COMP-440/Project/Comp440Project&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4830c6a5-cb95-4977-b66a-ca09966970f9" name="Changes" comment="" />
+      <created>1721946470873</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721946470873</updated>
+    </task>
+    <task id="LOCAL-00001" summary="&#10;I added the items table, which us designed to store information about items posted by users. It includes columns for an auto-incrementing id (the unique identifier for each item), the username of the user who posted the item, title, description, categories, price, and postDate. The username column is a foreign key that references the user table. It ensures that each item is associated with a valid user. The table uses the InnoDB storage engine and utf8mb4 character set, allowing for robust and efficient data storage and retrieval.">
+      <option name="closed" value="true" />
+      <created>1722548573138</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722548573138</updated>
+    </task>
+    <task id="LOCAL-00002" summary="C">
+      <option name="closed" value="true" />
+      <created>1722794560985</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722794560985</updated>
+    </task>
+    <task id="LOCAL-00003" summary="I added 6 more files which represent what we need to do for Phase 3. I just added them but we still need to update several files to include the new routes and components">
+      <option name="closed" value="true" />
+      <created>1722991696607</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722991696607</updated>
+    </task>
+    <task id="LOCAL-00004" summary="I added 6 more files which represent what we need to do for Phase 3. I just added them but we still need to update several files to include the new routes and components">
+      <option name="closed" value="true" />
+      <created>1723050176279</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723050176279</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&#10;I added the items table, which us designed to store information about items posted by users. It includes columns for an auto-incrementing id (the unique identifier for each item), the username of the user who posted the item, title, description, categories, price, and postDate. The username column is a foreign key that references the user table. It ensures that each item is associated with a valid user. The table uses the InnoDB storage engine and utf8mb4 character set, allowing for robust and efficient data storage and retrieval." />
+    <MESSAGE value="C" />
+    <MESSAGE value="I added 6 more files which represent what we need to do for Phase 3. I just added them but we still need to update several files to include the new routes and components" />
+    <option name="LAST_COMMIT_MESSAGE" value="I added 6 more files which represent what we need to do for Phase 3. I just added them but we still need to update several files to include the new routes and components" />
+  </component>
+</project>

@@ -1,4 +1,5 @@
-// App.js
+
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
@@ -10,7 +11,7 @@ import MainPage from './MainPage.js';
 function App() {
   return (
     <Router>
-      
+
       <Routes>
         <Route path="/" element={<MainPage />}>
           <Route path='signup' element={<SignupForm />} />
@@ -23,3 +24,4 @@ function App() {
 }
 
 export default App;
+
